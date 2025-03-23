@@ -1,1 +1,347 @@
-Hellow World, Olivia here! This page is a WIP, come back soon!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olivia Koshy</title>
+    <style>
+        /* Import fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+        
+        /* Base styles with elegant typography */
+        body {
+            font-family: 'Cormorant Garamond', 'Palatino Linotype', Palatino, serif;
+            line-height: 1.6;
+            color: #4A484A;
+            background-color: #FFFAEF; /* Neutral ivory background */
+            margin: 0;
+            padding: 0;
+            font-size: 19px;
+        }
+        
+        /* Container for centered content */
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Header and navigation with elegant styling */
+        header {
+            margin: 2rem 0 3rem;
+            text-align: center;
+            border-bottom: 1px solid #BFD8BD;
+            padding-bottom: 1rem;
+            position: relative;
+        }
+        
+        header h1 {
+            font-weight: normal;
+            margin: 0;
+            font-size: 2.3rem;
+            letter-spacing: 0.06em;
+            color: #6A8D73;
+        }
+        
+        nav {
+            margin: 1.5rem 0 0;
+        }
+        
+        nav a {
+            margin: 0 1rem;
+            color: #899D8B;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: #6A8D73;
+        }
+        
+        nav a:before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -3px;
+            left: 0;
+            background-color: #BFD8BD;
+            transition: width 0.3s;
+        }
+        
+        nav a:hover:before {
+            width: 100%;
+        }
+        
+        /* Typography with elegant styling */
+        h2 {
+            font-weight: normal;
+            font-size: 1.8rem;
+            margin: 2.5rem 0 1rem;
+            color: #6A8D73;
+            text-align: center;
+            position: relative;
+        }
+        
+        h2:after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 1px;
+            background-color: #BFD8BD;
+            margin: 0.8rem auto 0;
+        }
+        
+        h3 {
+            font-weight: normal;
+            font-size: 1.4rem;
+            margin: 1.5rem 0 0.5rem;
+            color: #6A8D73;
+        }
+        
+        p {
+            margin: 0 0 1.5rem;
+            hyphens: none;
+            line-height: 1.7;
+        }
+        
+        a {
+            color: #8C7284;
+            text-decoration: none;
+            border-bottom: 1px dotted #D8BFD8;
+            padding-bottom: 1px;
+            transition: all 0.3s;
+        }
+        
+        a:hover {
+            color: #AA6F8E;
+            border-bottom: 1px solid #D8BFD8;
+        }
+        
+        blockquote {
+            margin: 2rem 0;
+            padding: 0.5rem 2rem;
+            border-left: 2px solid #BFD8BD;
+            font-style: italic;
+            color: #777;
+            background-color: rgba(191, 216, 189, 0.1);
+            border-radius: 0 2px 2px 0;
+        }
+        
+        /* Specific sections with elegant styling */
+        .intro {
+            margin: 3rem 0 4rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .intro p {
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .project {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #E6E6E0;
+        }
+        
+        .project:last-child {
+            border-bottom: none;
+        }
+        
+        .date {
+            color: #AA6F8E;
+            font-style: italic;
+            display: block;
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.02em;
+        }
+        
+        /* Contact form with elegant styling */
+        .contact-form {
+            margin: 2rem 0;
+            background-color: rgba(191, 216, 189, 0.1);
+            padding: 2rem;
+            border: 1px solid #BFD8BD;
+            border-radius: 4px;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #6A8D73;
+            font-weight: 500;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #D1D1C7;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+            background-color: white;
+            transition: all 0.3s;
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #BFD8BD;
+            box-shadow: 0 0 0 2px rgba(191, 216, 189, 0.2);
+        }
+        
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        button {
+            background-color: #AA6F8E;
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            font-family: inherit;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        button:hover {
+            background-color: #8C7284;
+        }
+        
+        /* Image styling */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 2rem auto;
+            border-radius: 4px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .profile-img {
+            width: 220px;
+            height: auto;
+            margin: 0 auto 2rem;
+            border: 1px solid #E6E6E0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #BFD8BD;
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        .social-links {
+            margin-bottom: 1.5rem;
+        }
+        
+        .social-links a {
+            margin: 0 0.8rem;
+            transition: all 0.3s;
+            border-bottom: none;
+        }
+        
+        .social-links a:hover {
+            color: #AA6F8E;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            body {
+                font-size: 18px;
+            }
+            
+            .container {
+                padding: 1.5rem;
+            }
+            
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            nav a {
+                margin: 0 0.5rem;
+                font-size: 1rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            h3 {
+                font-size: 1.3rem;
+            }
+        }
+        
+        .intro-header {
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: #6A8D73;
+            text-align: center;
+            font-size: 1.4rem;
+        }
+        
+        .intro-header:after {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Olivia Koshy</h1>
+            <nav>
+                <a href="#about">About</a>
+            </nav>
+        </header>
+        
+        <section id="about" class="intro">
+            <h3 class="intro-header">Hi I'm Olivia</h3>
+            <p>San Francisco resident. </p>
+            <p>I spend a lot of my time thinking about AI and how to use it to
+            better understand large amounts of data.</p>
+            <p>I'm a product manager at <a
+            href="https://hex.tech" target="_blank">Hex</a> leading our AI
+            efforts. I transitioned from software engineering - and previously helped build
+            much of the early version of <a href="https://hex.tech/product/magic-ai/"
+            target="_blank">Hex Magic</a>.</p>
+            <p>I co-run <a
+            href="https://eecs.berkeley.edu/resources/undergrads/accel/"
+            target="_blank">Accel Scholars</a>, a mentorship program for
+            exceptional Berkeley students interested in startups. It's the best
+            thing I do with my free time.</p>
+            <p>Previously I worked on machine learning systems for radiology at
+            <a
+            href="https://www.mobihealthnews.com/news/radiology-startup-sirona-medical-acquires-nines-ai-some-staff"
+            target="_blank">Nines</a>.
+            I studied Computer Science at Berkeley, while there I helped
+            found and
+            lead <a href="https://ml.berkeley.edu/" target="_blank"> Machine
+            Learning at Berkely</a> and spent time at Facebook</a> and <a href="https://www.skydio.com/" target="_blank"></a>Skydio</a>.</p>
+        </section>
+        <footer>
+            <div class="social-links">
+                <a href="https://x.com/oliviakoshy" target="_blank">Twitter</a>
+                <a href="https://www.linkedin.com/in/okoshy/" target="_blank">Linkedin</a>
+            </div>
+            <p>&copy; 2025 Olivia Koshy. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
